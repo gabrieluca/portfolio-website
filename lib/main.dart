@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:resume/home_screen.dart';
-import 'package:resume/constant.dart';
+import 'home_screen.dart';
+import 'constant.dart';
+
+import 'initialize.dart';
 
 void main() {
+  initialize();
   runApp(MyApp());
 }
 

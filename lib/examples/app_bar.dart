@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:resume/examples/default_button.dart';
+import 'default_button.dart';
 
 import 'menu_item.dart';
 

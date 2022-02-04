@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:resume/domain/social_media.dart';
+import 'domain/social_media.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class Intro extends StatelessWidget {
