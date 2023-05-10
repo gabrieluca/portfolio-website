@@ -8,6 +8,7 @@
 .buildlog/
 .history
 .svn/
+.tool-versions
 
 # IntelliJ related
 *.iml
@@ -32,7 +33,6 @@
 /build/
 
 # Web related
-lib/generated_plugin_registrant.dart
 
 # Symbolication related
 app.*.symbols

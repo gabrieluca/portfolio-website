@@ -7,6 +7,7 @@ import 'initialize.dart';
 void main() {
   initialize();
   runApp(MyApp());
+  //TESTE
 }
 
 class MyApp extends StatelessWidget {
