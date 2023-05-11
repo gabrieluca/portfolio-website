@@ -2,15 +2,14 @@ import 'package:flutter/material.dart';
 import 'home_screen.dart';
 import 'constant.dart';
 
-import 'initialize.dart';
-
 void main() {
-  initialize();
-  runApp(MyApp());
+  runApp(const MyApp());
   //TESTE
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
@@ -26,7 +25,7 @@ class MyApp extends StatelessWidget {
         // closer together (more dense) than on mobile platforms.
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: HomeScreen(),
+      home: const HomeScreen(),
     );
   }
 }
