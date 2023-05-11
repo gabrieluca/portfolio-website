@@ -4,12 +4,9 @@ import '../constant.dart';
 
 class MenuItem extends StatelessWidget {
   final String title;
-  final Function press;
-  const MenuItem({
-    Key key,
-    this.title,
-    this.press,
-  }) : super(key: key);
+  final VoidCallback press;
+
+  const MenuItem({super.key, required this.title, required this.press});
 
   @override
   Widget build(BuildContext context) {

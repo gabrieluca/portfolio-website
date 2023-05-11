@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_icons/flutter_icons.dart';
+import 'package:icons_flutter/icons_flutter.dart';
 
 class SocialMedia {
   final String name;

@@ -3,6 +3,8 @@ import 'domain/social_media.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class Intro extends StatelessWidget {
+  const Intro({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -12,7 +14,7 @@ class Intro extends StatelessWidget {
         children: <Widget>[
           Text(
             "Gabriel Luca",
-            style: Theme.of(context).textTheme.headline1.copyWith(
+            style: Theme.of(context).textTheme.headline1?.copyWith(
                   // color: kTextcolor,
                   fontWeight: FontWeight.bold,
                 ),
@@ -32,14 +34,14 @@ class Intro extends StatelessWidget {
 class SocialMediaIcons extends StatelessWidget {
   final SocialMedia socialMedia;
 
-  const SocialMediaIcons(this.socialMedia);
+  const SocialMediaIcons(this.socialMedia, {super.key});
 
   @override
   Widget build(BuildContext context) {
     return IconButton(
       disabledColor: Colors.white,
       icon: Icon(socialMedia.icon),
-      onPressed: socialMedia.url != "" ? () => launch(socialMedia.url) : () {},
+      onPressed: socialMedia.url.isNotEmpty ? () => launch(socialMedia.url) : () {},
       tooltip: socialMedia.name,
     );
   }
