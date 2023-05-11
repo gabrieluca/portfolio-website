@@ -14,6 +14,7 @@ class Intro extends StatelessWidget {
         children: <Widget>[
           Text(
             "Gabriel Luca",
+            // ignore: deprecated_member_use
             style: Theme.of(context).textTheme.headline1?.copyWith(
                   // color: kTextcolor,
                   fontWeight: FontWeight.bold,
@@ -41,6 +42,7 @@ class SocialMediaIcons extends StatelessWidget {
     return IconButton(
       disabledColor: Colors.white,
       icon: Icon(socialMedia.icon),
+      // ignore: deprecated_member_use
       onPressed: socialMedia.url.isNotEmpty ? () => launch(socialMedia.url) : () {},
       tooltip: socialMedia.name,
     );

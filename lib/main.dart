@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:url_strategy/url_strategy.dart';
 import 'home_screen.dart';
 import 'constant.dart';
 
 void main() {
+  setPathUrlStrategy();
   runApp(const MyApp());
   //TESTE
 }
@@ -14,7 +16,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Web',
+      title: 'Gabriel Luca',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primaryColor: kPrimaryColor,
