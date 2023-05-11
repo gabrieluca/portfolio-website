@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
+import 'custom_menu_item.dart';
 import 'default_button.dart';
-
-import 'menu_item.dart';
 
 class CustomAppBar extends StatelessWidget {
   @override
@@ -33,23 +32,23 @@ class CustomAppBar extends StatelessWidget {
             style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
           ),
           Spacer(),
-          MenuItem(
+          CustomMenuItem(
             title: "Home",
             press: () {},
           ),
-          MenuItem(
+          CustomMenuItem(
             title: "about",
             press: () {},
           ),
-          MenuItem(
+          CustomMenuItem(
             title: "Pricing",
             press: () {},
           ),
-          MenuItem(
+          CustomMenuItem(
             title: "Contact",
             press: () {},
           ),
-          MenuItem(
+          CustomMenuItem(
             title: "Login",
             press: () {},
           ),

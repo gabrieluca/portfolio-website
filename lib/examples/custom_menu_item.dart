@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 
 import '../constant.dart';
 
-class MenuItem extends StatelessWidget {
+class CustomMenuItem extends StatelessWidget {
   final String title;
   final Function press;
-  const MenuItem({
+  const CustomMenuItem({
     Key key,
     this.title,
     this.press,

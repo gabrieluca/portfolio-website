@@ -23,6 +23,9 @@ class HomeScreen extends StatelessWidget {
             Spacer(
               flex: 2,
             ),
+            //TODO Apps screen shots / projects
+            //TODO Repo with architecture sample
+            //TODO Skills list
           ],
         ),
       ),
