@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'contact_buttons.dart';
 import 'domain/social_media.dart';
@@ -13,6 +14,8 @@ class Intro extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final isMobile = defaultTargetPlatform == TargetPlatform.iOS ||
+        defaultTargetPlatform == TargetPlatform.android;
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 20),
       child: Column(
@@ -20,15 +23,23 @@ class Intro extends StatelessWidget {
         children: <Widget>[
           Wrap(
             children: [
-              Text(
-                "Gabriel Luca Ruiz",
-                // ignore: deprecated_member_use
-                style: Theme.of(context).textTheme.headline1?.copyWith(
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white.withOpacity(0.8),
-                  shadows: [kShadow],
-                ),
-              ),
+              ...['Gabriel ', 'Luca ', 'Ruiz']
+                  .map((e) => Text(
+                        e,
+                        style: isMobile
+                            ? Theme.of(context).textTheme.displayMedium?.copyWith(
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white.withOpacity(0.8),
+                                shadows: [kShadow],
+                              )
+                            : Theme.of(context).textTheme.displayLarge?.copyWith(
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white.withOpacity(0.8),
+                                shadows: [kShadow],
+                              ),
+                      ))
+                  .toList(),
+              // AutoSizeText ?
             ],
           ),
           const SizedBox(height: 32),
