@@ -43,6 +43,7 @@ class Intro extends StatelessWidget {
             ],
           ),
           const SizedBox(height: 32),
+          //TODO Make button responsive using responsive showcase example (Grid)
           Center(
             child: SizedBox(
               height: 100,
