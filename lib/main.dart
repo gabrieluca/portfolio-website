@@ -1,28 +1,26 @@
 import 'package:flutter/material.dart';
+import 'package:url_strategy/url_strategy.dart';
 import 'home_screen.dart';
 import 'constant.dart';
 
 void main() {
+  setPathUrlStrategy();
   runApp(const MyApp());
-  //TESTE
 }
 
+//TODO Add launcher icon
+//TODO Add responsivity
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Web',
+      title: 'Gabriel Luca Ruiz',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primaryColor: kPrimaryColor,
         brightness: Brightness.dark,
-
-        // This makes the visual density adapt to the platform that you run
-        // the app on. For desktop platforms, the controls will be smaller and
-        // closer together (more dense) than on mobile platforms.
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: const HomeScreen(),
