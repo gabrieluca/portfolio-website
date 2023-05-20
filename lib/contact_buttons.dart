@@ -1,5 +1,6 @@
 // ignore_for_file: deprecated_member_use
 
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -39,6 +40,8 @@ class _ContactButtonsState extends State<ContactButtons> with TickerProviderStat
 
   @override
   Widget build(BuildContext context) {
+    final isMobile = defaultTargetPlatform == TargetPlatform.iOS ||
+        defaultTargetPlatform == TargetPlatform.android;
     return InkWell(
       onTap: widget.socialMedia.url.isNotEmpty ? () => launch(widget.socialMedia.url) : () {},
       onHover: (isHovered) {
@@ -58,7 +61,7 @@ class _ContactButtonsState extends State<ContactButtons> with TickerProviderStat
                   size: size,
                   shadows: [kShadow],
                 ),
-                if (size == _hoveredSize) ...[
+                if (size == _hoveredSize || isMobile) ...[
                   const SizedBox(height: 8),
                   Text(
                     widget.socialMedia.name,
