@@ -50,7 +50,10 @@ class Intro extends StatelessWidget {
                 children: [
                   ...socialMediaList
                       .map((e) => Padding(
-                            padding: const EdgeInsets.symmetric(horizontal: 12),
+                            padding: const EdgeInsets.symmetric(
+                              horizontal: 12,
+                              vertical: 12,
+                            ),
                             child: ContactButtons(e),
                           ))
                       .toList(),
