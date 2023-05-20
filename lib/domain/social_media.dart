@@ -4,40 +4,55 @@ import 'package:icons_flutter/icons_flutter.dart';
 class SocialMedia {
   final String name;
   final String url;
-  final IconData icon;
+  final IconData? icon;
+  final String? image;
 
-  SocialMedia(this.name, this.url, this.icon);
+  SocialMedia(
+    this.name,
+    this.url, {
+    this.icon,
+    this.image,
+  }) : assert(icon != null || image != null);
 }
 
 final socialMediaList = [
   SocialMedia(
+    'Twitter',
+    "https://twitter.com/_gabrieluca",
+    icon: FlutterIcons.twitter_ant,
+  ),
+
+  /// Review if it's not too personal
+  SocialMedia(
+    'Instagram',
+    "https://www.instagram.com/_gabrieluca",
+    icon: FlutterIcons.instagram_faw,
+  ),
+  SocialMedia(
     'GitHub',
     "https://github.com/gabrieluca",
-    FlutterIcons.github_faw,
+    icon: FlutterIcons.github_faw,
   ),
   SocialMedia(
     'Linkedin',
     "https://www.linkedin.com/in/gabrieluca",
-    FlutterIcons.linkedin_faw,
+    icon: FlutterIcons.linkedin_faw,
   ),
   SocialMedia(
     'Email',
     "mailto:gabrieluca17@gmail.com",
-    FlutterIcons.mail_fea,
+    icon: FlutterIcons.mail_fea,
   ),
   SocialMedia(
-    'Instagram',
-    "https://www.instagram.com/_gabrieluca",
-    FlutterIcons.instagram_faw,
+    'Resume',
+    "https://docs.google.com/document/d/1dXa1qxHPe7WZcNaSKiwU-fufTaJUNOttiZTRa67hZl0/edit?usp=sharing",
+    icon: Icons.contact_page,
   ),
-  SocialMedia(
-    'Discord',
-    "https://discord.com/users/816494917714706453",
-    FlutterIcons.discord_faw5d,
-  ),
-  SocialMedia(
-    'Twitter',
-    "https://twitter.com/_gabrieluca",
-    FlutterIcons.twitter_ant,
-  ),
+
+  /// Discord contact seems unnecessary
+  // SocialMedia(
+  //   'Discord',
+  //   "https://discord.com/users/816494917714706453",
+  //   icon: FlutterIcons.discord_faw5d,
+  // ),
 ];

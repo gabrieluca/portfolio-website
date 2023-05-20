@@ -1,6 +1,12 @@
 import 'package:flutter/material.dart';
+import 'contact_buttons.dart';
 import 'domain/social_media.dart';
-import 'package:url_launcher/url_launcher.dart';
+
+final kShadow = Shadow(
+  offset: const Offset(0, 2),
+  blurRadius: 10,
+  color: Colors.black.withOpacity(0.5),
+);
 
 class Intro extends StatelessWidget {
   const Intro({super.key});
@@ -12,39 +18,37 @@ class Intro extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
-          Text(
-            "Gabriel Luca",
-            // ignore: deprecated_member_use
-            style: Theme.of(context).textTheme.headline1?.copyWith(
-                  // color: kTextcolor,
-                  fontWeight: FontWeight.bold,
-                ),
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
+          Wrap(
             children: [
-              ...socialMediaList.map((e) => SocialMediaIcons(e)).toList(),
+              Text(
+                "Gabriel Luca Ruiz",
+                // ignore: deprecated_member_use
+                style: Theme.of(context).textTheme.headline1?.copyWith(
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white.withOpacity(0.8),
+                  shadows: [kShadow],
+                ),
+              ),
             ],
+          ),
+          const SizedBox(height: 32),
+          Center(
+            child: SizedBox(
+              height: 100,
+              child: Wrap(
+                children: [
+                  ...socialMediaList
+                      .map((e) => Padding(
+                            padding: const EdgeInsets.symmetric(horizontal: 12),
+                            child: ContactButtons(e),
+                          ))
+                      .toList(),
+                ],
+              ),
+            ),
           ),
         ],
       ),
-    );
-  }
-}
-
-class SocialMediaIcons extends StatelessWidget {
-  final SocialMedia socialMedia;
-
-  const SocialMediaIcons(this.socialMedia, {super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return IconButton(
-      disabledColor: Colors.white,
-      icon: Icon(socialMedia.icon),
-      // ignore: deprecated_member_use
-      onPressed: socialMedia.url.isNotEmpty ? () => launch(socialMedia.url) : () {},
-      tooltip: socialMedia.name,
     );
   }
 }

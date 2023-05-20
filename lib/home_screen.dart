@@ -22,9 +22,11 @@ class HomeScreen extends StatelessWidget {
           children: const <Widget>[
             Spacer(),
             Intro(),
-            Spacer(
-              flex: 2,
-            ),
+            Spacer(flex: 2),
+            //TODO Apps screenshots
+            //TODO Scroll paralax
+            //TODO Experience
+            //TODO Skills
           ],
         ),
       ),
