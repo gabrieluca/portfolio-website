@@ -42,7 +42,7 @@ class Intro extends StatelessWidget {
               // AutoSizeText ?
             ],
           ),
-          const SizedBox(height: 32),
+          const SizedBox(height: 40),
           //TODO Make button responsive using responsive showcase example (Grid)
           Center(
             child: SizedBox(
@@ -52,7 +52,7 @@ class Intro extends StatelessWidget {
                   ...socialMediaList
                       .map((e) => Padding(
                             padding: const EdgeInsets.symmetric(
-                              horizontal: 12,
+                              horizontal: 16,
                               vertical: 12,
                             ),
                             child: ContactButtons(e),

@@ -7,7 +7,7 @@ import 'package:url_launcher/url_launcher.dart';
 import 'domain/social_media.dart';
 import 'intro.dart';
 
-const _defaultSize = 32.0;
+const _defaultSize = 48.0;
 const _hoveredSize = 64.0;
 
 class ContactButtons extends StatefulWidget {
@@ -72,6 +72,8 @@ class _ContactButtonsState extends State<ContactButtons> with TickerProviderStat
                       // fontWeight: FontWeight.bold,
                       shadows: [kShadow],
                     ),
+                    maxLines: 2,
+                    textAlign: TextAlign.center,
                   ),
                 ]
               ],
