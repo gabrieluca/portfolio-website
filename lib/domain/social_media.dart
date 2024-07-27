@@ -49,12 +49,14 @@ final socialMediaList = [
   SocialMedia(
     'Resume',
     'https://docs.google.com/document/d/1dXa1qxHPe7WZcNaSKiwU-fufTaJUNOttiZTRa67hZl0/edit?usp=sharing',
+    // 'https://docs.google.com/document/d/1dXa1qxHPe7WZcNaSKiwU-fufTaJUNOttiZTRa67hZl0/export?format=pdf',
     icon: FontAwesomeIcons.fileLines,
     // icon: Icons.picture_as_pdf,
   ),
   SocialMedia(
     'Currículo \nPT - BR',
-    'https://docs.google.com/document/d/1dXa1qxHPe7WZcNaSKiwU-fufTaJUNOttiZTRa67hZl0/edit?usp=sharing',
+    'https://docs.google.com/document/d/1ZxaQjB8vfldlMsBoePPXpT91Oa_UIn8dpfeKWjVe9do/edit?usp=sharing',
+    // 'https://docs.google.com/document/d/1ZxaQjB8vfldlMsBoePPXpT91Oa_UIn8dpfeKWjVe9do/export?format=pdf',
     icon: FontAwesomeIcons.file,
     // icon: Icons.picture_as_pdf,
   ),
