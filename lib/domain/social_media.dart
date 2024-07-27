@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:icons_flutter/icons_flutter.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class SocialMedia {
-
   SocialMedia(
     this.name,
     this.url, {
@@ -19,33 +18,45 @@ final socialMediaList = [
   SocialMedia(
     'GitHub',
     'https://github.com/gabrieluca',
-    icon: FlutterIcons.github_faw5d,
+    icon: FontAwesomeIcons.github,
+    // icon: FlutterIcons.github_faw5d,
   ),
 
   SocialMedia(
     'Showcase \nApp',
     'https://github.com/gabrieluca/letterboxd',
-    icon: FlutterIcons.code_faw5s,
+    icon: FontAwesomeIcons.code,
+    // icon: FlutterIcons.code_faw5s,
   ),
-  SocialMedia(
-    'Twitter',
-    'https://twitter.com/_gabrieluca',
-    icon: FlutterIcons.twitter_faw5d,
-  ),
+  // Twitter not used
+  // SocialMedia(
+  //   'Twitter',
+  //   'https://twitter.com/_gabrieluca',
+  //   icon: FlutterIcons.twitter_faw5d,
+  // ),
   SocialMedia(
     'Linkedin',
     'https://www.linkedin.com/in/gabrieluca',
-    icon: FlutterIcons.linkedin_faw5d,
+    icon: FontAwesomeIcons.linkedin,
+    // icon: FlutterIcons.linkedin_faw5d,
   ),
   SocialMedia(
     'Email',
     'mailto:gabrieluca17@gmail.com',
-    icon: FlutterIcons.mail_fea,
+    icon: FontAwesomeIcons.envelope,
+    // icon: FlutterIcons.mail_fea,
   ),
   SocialMedia(
     'Resume',
     'https://docs.google.com/document/d/1dXa1qxHPe7WZcNaSKiwU-fufTaJUNOttiZTRa67hZl0/edit?usp=sharing',
-    icon: Icons.picture_as_pdf,
+    icon: FontAwesomeIcons.fileLines,
+    // icon: Icons.picture_as_pdf,
+  ),
+  SocialMedia(
+    'Currículo \nPT - BR',
+    'https://docs.google.com/document/d/1dXa1qxHPe7WZcNaSKiwU-fufTaJUNOttiZTRa67hZl0/edit?usp=sharing',
+    icon: FontAwesomeIcons.file,
+    // icon: Icons.picture_as_pdf,
   ),
 
   /// Too personal
