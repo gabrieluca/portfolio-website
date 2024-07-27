@@ -11,9 +11,9 @@ const _defaultSize = 48.0;
 const _hoveredSize = 64.0;
 
 class ContactButtons extends StatefulWidget {
-  final SocialMedia socialMedia;
-
   const ContactButtons(this.socialMedia, {super.key});
+
+  final SocialMedia socialMedia;
 
   @override
   State<ContactButtons> createState() => _ContactButtonsState();
@@ -75,10 +75,10 @@ class _ContactButtonsState extends State<ContactButtons> with TickerProviderStat
                     maxLines: 2,
                     textAlign: TextAlign.center,
                   ),
-                ]
+                ],
               ],
             );
-          }),
+          },),
     );
   }
 }

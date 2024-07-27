@@ -25,38 +25,38 @@ class CustomAppBar extends StatelessWidget {
       child: Row(
         children: <Widget>[
           Image.asset(
-            "assets/images/logo.png",
+            'assets/images/logo.png',
             height: 25,
             alignment: Alignment.topCenter,
           ),
           const SizedBox(width: 5),
           Text(
-            "Foodi".toUpperCase(),
+            'Foodi'.toUpperCase(),
             style: const TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
           ),
           const Spacer(),
           MenuItem(
-            title: "Home",
+            title: 'Home',
             press: () {},
           ),
           MenuItem(
-            title: "about",
+            title: 'about',
             press: () {},
           ),
           MenuItem(
-            title: "Pricing",
+            title: 'Pricing',
             press: () {},
           ),
           MenuItem(
-            title: "Contact",
+            title: 'Contact',
             press: () {},
           ),
           MenuItem(
-            title: "Login",
+            title: 'Login',
             press: () {},
           ),
           DefaultButton(
-            text: "Get Started",
+            text: 'Get Started',
             press: () {},
           ),
         ],

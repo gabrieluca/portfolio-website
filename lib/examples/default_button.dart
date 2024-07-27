@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 import '../constant.dart';
 
 class DefaultButton extends StatelessWidget {
+
+  const DefaultButton({required this.text, required this.press, super.key});
   final String text;
   final VoidCallback press;
-
-  const DefaultButton({super.key, required this.text, required this.press});
 
   @override
   Widget build(BuildContext context) {

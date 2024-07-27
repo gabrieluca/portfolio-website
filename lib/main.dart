@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:url_strategy/url_strategy.dart';
-import 'home_screen.dart';
+
 import 'constant.dart';
+import 'home_screen.dart';
 
 void main() {
   setPathUrlStrategy();

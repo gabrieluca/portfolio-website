@@ -1,5 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+
 import 'contact_buttons.dart';
 import 'domain/social_media.dart';
 
@@ -19,26 +20,25 @@ class Intro extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 20),
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
           Wrap(
             children: [
-              ...['Gabriel ', 'Luca ', 'Ruiz']
-                  .map((e) => Text(
-                        e,
-                        style: isMobile
-                            ? Theme.of(context).textTheme.displayMedium?.copyWith(
-                                fontWeight: FontWeight.bold,
-                                color: Colors.white.withOpacity(0.8),
-                                shadows: [kShadow],
-                              )
-                            : Theme.of(context).textTheme.displayLarge?.copyWith(
-                                fontWeight: FontWeight.bold,
-                                color: Colors.white.withOpacity(0.8),
-                                shadows: [kShadow],
-                              ),
-                      ))
-                  .toList(),
+              ...['Gabriel ', 'Luca ', 'Ruiz'].map(
+                (e) => Text(
+                  e,
+                  style: isMobile
+                      ? Theme.of(context).textTheme.displayMedium?.copyWith(
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white.withOpacity(0.8),
+                          shadows: [kShadow],
+                        )
+                      : Theme.of(context).textTheme.displayLarge?.copyWith(
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white.withOpacity(0.8),
+                          shadows: [kShadow],
+                        ),
+                ),
+              ),
               // AutoSizeText ?
             ],
           ),
@@ -49,15 +49,13 @@ class Intro extends StatelessWidget {
               height: 100,
               child: Wrap(
                 children: [
-                  ...socialMediaList
-                      .map((e) => Padding(
-                            padding: const EdgeInsets.symmetric(
-                              horizontal: 16,
-                              vertical: 12,
-                            ),
-                            child: ContactButtons(e),
-                          ))
-                      .toList(),
+                  ...socialMediaList.map((e) => Padding(
+                        padding: const EdgeInsets.symmetric(
+                          horizontal: 16,
+                          vertical: 12,
+                        ),
+                        child: ContactButtons(e),
+                      ),),
                 ],
               ),
             ),

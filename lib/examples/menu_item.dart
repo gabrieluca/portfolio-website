@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 import '../constant.dart';
 
 class MenuItem extends StatelessWidget {
+
+  const MenuItem({required this.title, required this.press, super.key});
   final String title;
   final VoidCallback press;
-
-  const MenuItem({super.key, required this.title, required this.press});
 
   @override
   Widget build(BuildContext context) {
